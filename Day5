@@ -1,0 +1,106 @@
+Arrays:
+-->Collection of similar kind of data in a continous allocation.
+-->In c,c++, we have pointers so definately elements  will be stored in Continous format.
+-->In java,we dont have pointers then there is a chance of elements might be stored in non-continous format.
+-->Syntax:
+data_type[] array_name;
+primitive and Non-primitive:
+primitive data_types:cant be ,divided.eg:string,user_defined objects  
+non-primitive data_type:can be divided.eg:int,float
+Class Node{
+     int data;
+     node next;
+};
+-->All the objects will be stored in heap memory.
+-->All the references will be stored in stack memory.
+-->Stack memory have lesser space than heap.
+
+//Example
+class Main{
+public static void main(String[]args){
+  data_type[] array_name;
+  int a=10;
+  int b=20;
+  int c=30;
+  int[] arr={10,20,30};
+ }
+}
+-->Instead of creating multiple variables, create an array.
+-->Variables printed using variable_name.
+-->Arrays are printed using index values.
+-->Index values range:(0,n-1)
+
+//Declaration and initialization happen in same line
+class Main{
+public static void main(String[]args){
+int [] arr = {1,2,3,4,5};
+for(int i = 0;i <arr.length ; i++){
+system.out.println(arr[0]);
+}
+ }
+}
+-->To get the length of the array we have a mathod called array_name.length() 
+and 
+-->in string it is string_name.length()
+
+//CAMEL CASE AND SNAKE CASE : 
+
+//Camel Case:
+-->Words are joined together.
+-->The first word is small, and each new word starts with a capital letter.
+-->No spaces or underscores.
+-->Camel case is a naming convention where:
+-->The first word is in lowercase.
+-->Each subsequent word starts with a capital letter.
+-->No spaces or underscores.
+-->Example:
+-->int studentMarks;
+-->String firstName;
+-->boolean isAvailable;
+-->Common in: **Java variables, methods, object names.**
+
+//Snake Case:
+-->Words are joined using underscores (_).
+-->All letters are usually small.
+-->Snake case is a naming convention where:
+-->All letters are usually in lowercase.
+-->Words are separated using an underscore (\_).
+-->Example:
+int student_marks;
+String first_name;
+boolean is_available;
+
+
+-->TYPE OF PRINTING FORMAT :
+1) for(int i = 0;i <arr.length ; i++){
+   system.out.println(arr[0]);
+}//using simple for loop
+2) for(int i : arr){
+     system.out.println(i + " ");
+}//for each loop : we dont need index values.
+3) system.out.print(Arrays.tostring(arr));
+//toString() is an in-build method to print array
+  toString can accept only one argument tostring(arr)
+
+-->Declaring the size of an array initializing the values later.
+-->array having fixed size if you declared an array size it cant be change.
+   int[] arr = new int[5];
+-->int array ,before reference was created with the help of new keyword,actual object will be created in heap memory.
+-->further particular datatype and size.
+-->if the array type is integer all defualt values are 0's.
+-->if it is string all default values are NULL and NULL is a literal(you can assign but not create).
+int []arr = new int [5];
+arr[0] = 1;
+arr[1] = 2;
+arr[2] = 3;
+arr[3] = 4;
+arr[4] = 5;
+
+
+
+
+
+
+
+
+
