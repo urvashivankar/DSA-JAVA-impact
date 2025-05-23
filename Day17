@@ -1,0 +1,140 @@
+-->Maximum product of subArray elements :
+arr : [2,3,-6,4]
+start your product variable with 1
+--> in the subarray if we have "even" positive numbers product will be positive
+--> in the subarray if we have "odd" negative numbers product will be negative
+--> in the subarray if we have atleast  "0"  sort your product variable with 1
+--> if we have negative value the product of prefix element will be positive and the suffix of negative will be  negative
+preffix : previous element 
+suffix : after element 
+[2,3,-6,4,0,5,2,3,-1,0,7,8,9,-3] initialize max variable
+
+// leetcode875 kokobananas : steps logic
+check the element till max
+loop index 0 - max
+initialize left = 0,right = max
+get the middle value
+divide array elements
+get the ciel values
+add all thoes ciel values and compare with target hours 
+if it is <= eliminate right half
+change right  to mid-1
+if the sum is >  to the target eliminate left half
+change  left = mid+1
+return arr of left 
+
+//OOPS : object oriented programing 
+4 mian pillars :
+1.)Encapsulation
+Definition: Wrapping the data (variables) and code (methods) into a single unit called a class, and restricting access to some of the object's components.
+Goal: Data hiding and access control.
+if the variabless are private we cant access outside the class
+if you want to acess we can access using methods 
+Example:
+  class Student {
+      private int age;
+
+      public void setAge(int age) {
+          this.age = age;
+      }
+
+      public int getAge() {
+          return age;
+      }
+  }
+  ```
+
+  * `age` is private — only accessible via `getAge()` and `setAge()` methods.
+
+---
+
+2.)Inheritance
+
+Definition: When one class (child) inherits properties and behaviors from another class (parent).
+Goal: Code reuse and hierarchical classification.
+types : single,multiple,hybrid,hiearachical 
+single inheritance :  One child class inherits from one parent class.
+multilevel inheritance :A class is derived from a class which is also derived from another class.
+hieararchical inheritance : Multiple classes inherit from a single parent class.
+hybrid inheritance :Combination of single, multiple, or multilevel using interfaces.
+multiple inheritance :A class can implement multiple interfaces (not extend multiple classes).
+Example:
+  class Animal {
+      void sound() {
+          System.out.println("Animal makes sound");
+      }
+  }
+
+  class Dog extends Animal {
+      void bark() {
+          System.out.println("Dog barks");
+      }
+  }
+3.)Polymorphism : same method appearing multiple times 
+Definition: The ability to take many forms. It allows methods to behave differently based on the object calling them.
+Types:
+//Compile-time (Method Overloading): in same class if we have 2 methods with same name with deffrent parameters
+    class MathOperation {
+        int add(int a, int b) {
+            return a + b;
+        }
+
+        double add(double a, double b) {
+            return a + b;
+        }
+    }
+  //Run-time (Method Overriding): in child class if we declared a method  which were present in parent class
+---->>>>>>main method can not be overridden with diff parameters
+    class Animal {
+        void sound() {
+            System.out.println("Animal sound");
+        }
+    }
+
+    class Cat extends Animal {
+        @Override
+        void sound() {
+            System.out.println("Meow");
+        }
+    }
+    ```
+
+---
+
+4.) Abstraction
+
+Definition: Hiding complex implementation details and showing only essential features.
+Achieved using:
+types : data abstraction , function abstraction  ,procedural abstraction, control abstraction 
+
+
+Abstract Classes:
+
+    
+    abstract class Shape {
+        abstract void draw();
+    }
+
+    class Circle extends Shape {
+        void draw() {
+            System.out.println("Drawing Circle");
+        }
+    }
+  //Interfaces:
+    interface Animal {
+        void sound();
+    }
+
+    class Dog implements Animal {
+        public void sound() {
+            System.out.println("Bark");
+        }
+    }
+
+//Other OOP Principles:
+Class: Blueprint for objects.
+Object: Instance of a class.
+Constructor: Special method to initialize objects.
+this keyword: Refers to the current object.
+
+
