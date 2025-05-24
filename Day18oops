@@ -1,0 +1,47 @@
+inheritance : example 
+//multiple inheritance is not possible in java
+
+class A {
+    static void method1() {
+        System.out.println("Hello");
+    }
+
+    int method2(int a, int b) {
+        return a + b;
+    }
+}
+
+class B extends A {
+    int method3(int a, int b) {
+        return a - b;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        B obj = new B();
+
+        // Calling inherited method from class A
+        B.method1(); // Static method can be called using class name
+
+        // Calling method2 from class A
+        int sum = obj.method2(10, 5);
+        System.out.println("Sum: " + sum);
+
+        // Calling method3 from class B
+        int diff = obj.method3(10, 5);
+        System.out.println("Difference: " + diff);
+    }
+}
+
+-->polymorphism : Polymorphism means "many forms".
+In Java, it means the same method name can behave differently based on:
+the object that calls it, or
+the parameters passed to it.
+-->real life examples:
+Imagine the word draw():
+A Circle draws a round shape.
+A Square draws a box.
+A Triangle draws a triangle.
+But they all use the same method name: draw().
+So, same method name → different behavior depending on the object.
